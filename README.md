@@ -31,5 +31,15 @@ PortScout is a efficient port scanner designed to help identifying open ports on
 - **Specific Ports Scan**: ```(-ps) - To specify specific ports for scanning, e.g., 80,443,8080```
 - **Port Range**: ```(-p) - Default range is 1-1024```
 
+## Examples
+1. **Basic Scan**:
+   ```sh
+   python3 portscout.py <target>
+2. **Version and Port Range scan**:
+   ```sh
+   python3 portscout.py -v -p 1-80 <target>
+3. **Specific Ports Scan**:
+   ```sh
+   python3 portscout.py -ps 1, 80,443 <target>
 
 
