@@ -3,6 +3,7 @@ import sys
 import socket
 import os
 import time
+import shlex
 import threading
 import psutil
 from colorama import Fore, Back, Style
@@ -94,22 +95,19 @@ def scan_port(port, target):
     except Exception as e:
         print(f"Error scanning port {port}: {e}")
 
-if response == 0:
-    print(
-        "[",
-        Fore.LIGHTCYAN_EX + "^" + Style.RESET_ALL,
-        "]",
-        Fore.YELLOW + target + Style.RESET_ALL,
-        Fore.GREEN + "is UP" + Style.RESET_ALL
-    )
+def safe_ping(target):
+    if os.name == 'nt':
+        command = f"ping -n 1 {shlex.quote(target)}"
+    else:
+        command = f"ping -c 1 {shlex.quote(target)}"
+
+    response = os.system(command)
+    return response == 0
+
+if safe_ping(target):
+    print(f"[{Fore.LIGHTCYAN_EX + '^' + Style.RESET_ALL}][{Fore.YELLOW + target + Style.RESET_ALL}][{Fore.GREEN + 'is UP' + Style.RESET_ALL}]")
 else:
-    print(
-        "[",
-        Fore.LIGHTCYAN_EX + "X" + Style.RESET_ALL,
-        "]",
-        Fore.YELLOW + target + Style.RESET_ALL,
-        Fore.RED + "is DOWN" + Style.RESET_ALL
-    )
+    print(f"[{Fore.LIGHTCYAN_EX + 'X' + Style.RESET_ALL}][{Fore.YELLOW + target + Style.RESET_ALL}][{Fore.RED + 'is DOWN' + Style.RESET_ALL}]")
     sys.exit()
 
 def scan_ports(target, port_range, specific_ports):
