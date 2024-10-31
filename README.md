@@ -7,7 +7,7 @@ Fast port scanner written in Python
    (https://github.com/0x414141411/Portscout)
 
 # How to use
-(python3 portscout.py [options] <target>)
+[python3 portscout.py [options] <target>]
 
 Flags:
 (Version (-v) to perform version scan)
