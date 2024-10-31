@@ -40,6 +40,6 @@ PortScout is a efficient port scanner designed to help identifying open ports on
    python3 portscout.py -v -p 1-80 <target>
 3. **Specific Ports Scan**:
    ```sh
-   python3 portscout.py -ps 1, 80,443 <target>
+   python3 portscout.py -ps 1,80,443 <target>
 
 
