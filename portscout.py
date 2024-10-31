@@ -94,8 +94,6 @@ def scan_port(port, target):
     except Exception as e:
         print(f"Error scanning port {port}: {e}")
 
-response = os.system("ping -c 1 " + target if os.name != 'nt' else "ping -n 1 " + target)
-
 if response == 0:
     print(
         "[",
