@@ -3,14 +3,14 @@
 
 PortScout -- Fast and reliable port scanner written in Python
 
-PortScout is a powerful and efficient port scanner designed to assist penetration testers and cybersecurity professionals in identifying open ports on target systems. Built with Python, it offers a range of features to help you perform thorough and reliable port scans.
+PortScout is a efficient port scanner designed to help identifying open ports on target systems.
 
 ## Features
 
 - **Fast and Reliable**: Quickly identifies open ports on target systems.
 - **Version Scan**: Perform version scans on open ports.
 - **Specific Ports Scan**: Specify specific ports for scanning.
-- **Port Range Scan**: Specify a range of ports to scan (default is 1-1024).
+- **Port Range**: Specify a range of ports to scan (default is 1-1024).
 
 ## Installation
 
@@ -25,3 +25,11 @@ PortScout is a powerful and efficient port scanner designed to assist penetratio
 3. **Run PortScout**
    ```sh
    python portscout.py <target>
+
+## Flags
+- **Version Scan**: ```(-v) - To scan version of the host```
+- **Specific Ports Scan**: ```(-ps) - To specify specific ports for scanning, e.g., 80,443,8080```
+- **Port Range**: ```(-p) - Default range is 1-1024```
+
+
+
