@@ -1,20 +1,27 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/0x414141411/portscout/badge)](https://www.codefactor.io/repository/github/0x414141411/portscout)
 # PortScout
+
 PortScout -- Fast and reliable port scanner written in Python
 
-# Installation
-1. Clone my repository:
-   ``` https://github.com/0x414141411/Portscout ```
-2. Install requirements.txt:
-   ``` pip3 install -r requirements.txt ```
-3. Portscout ready to roll...
-   ``` python portscout.py <target> ```
+PortScout is a powerful and efficient port scanner designed to assist penetration testers and cybersecurity professionals in identifying open ports on target systems. Built with Python, it offers a range of features to help you perform thorough and reliable port scans.
 
-# How to use
-Use in exact order
-``` python3 portscout.py [options] <target> ```
+## Features
 
-Flags:
-Version: ``` (-v) to perform version scan ```
-Specific Ports ``` (-ps) - To specify specific ports ```
-Port Range ```(-p) - To specify range of ports (Default 1-1024) ```
+- **Fast and Reliable**: Quickly identifies open ports on target systems.
+- **Version Scan**: Perform version scans on open ports.
+- **Specific Ports Scan**: Specify specific ports for scanning.
+- **Port Range Scan**: Specify a range of ports to scan (default is 1-1024).
+
+## Installation
+
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/0x414141411/Portscout
+
+2. **Install Requirements**:
+   ```sh
+   pip3 install -r requirements.txt
+
+3. **Run PortScout**
+   ```sh
+   python portscout.py <target>
