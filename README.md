@@ -24,7 +24,7 @@ PortScout is a efficient port scanner designed to help identifying open ports on
 
 3. **Run PortScout**
    ```sh
-   python portscout.py <target>
+   python3 portscout.py <target>
 
 ## Flags
 - **Version Scan**: ```(-v) - To scan version of the host```
