@@ -11,9 +11,10 @@ PortScout -- Fast and reliable port scanner written in Python
    ``` python portscout.py <target> ```
 
 # How to use
+Use in exact order
 ``` python3 portscout.py [options] <target> ```
 
 Flags:
-``` Version (-v) to perform version scan ```
-``` Specific ports (-ps) - To specify specific ports ```
-``` Port Range (-p) - To specify range of ports (Default 1-1024) ```
+Version: ``` (-v) to perform version scan ```
+Specific Ports ``` (-ps) - To specify specific ports ```
+Port Range ```(-p) - To specify range of ports (Default 1-1024) ```
